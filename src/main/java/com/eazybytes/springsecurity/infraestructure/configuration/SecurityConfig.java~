@@ -46,7 +46,7 @@ public class SecurityConfig {
     public UserDetailsService userDetailsService() {
 
         var user = User.withUsername("user").password("{bcrypt}$2a$12$w7sTxpiSuMEYBRqu1Qdvv.dcuKmjPZ1aneuM21a/vytFwwYHa1y7u").authorities("read").build();
-        var admin = User.withUsername("admin").password("{bcrypt}$2a$12$fsgdC0ptInFb4VfJX92No.1QsmGNX7yuQHyY7LKk4u/LhezymSxfW").authorities("admin").build();
+        var admin = User.withUsername("admin").password("{bcrypt}$2a$12$QfhiYa5CsbVlBTLoVJQ/RuxWqlqEoMo539VWVjILFJz8VHcQEVc4i").authorities("admin").build();
 
         return new InMemoryUserDetailsManager(user, admin);
     }
